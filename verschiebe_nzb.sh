@@ -1,10 +1,16 @@
 #! /usr/bin/env bash
 
 # Pfade anpassen!
-DOWNLOAD_ORDNER="/home/florian/Downloads" # Passe diesen Pfad an deinen tatsächlichen Download-Ordner an
-ZIEL_ORDNER="/home/florian/mnt/Media/Download/watch/"
 
-LOG_FILE="$HOME/.local/share/verschiebe_nzb/verschiebe_nzb.log" # Pfad für die Log-Datei # Pfad für die Log-Datei
+# Platzhalter, die von Nix ersetzt werden
+DOWNLOAD_ORDNER="@downloadDir@"
+ZIEL_ORDNER="@targetDir@"
+LOG_FILE="@logFile@"
+
+
+#DOWNLOAD_ORDNER="/home/florian/Downloads" # Passe diesen Pfad an deinen tatsächlichen Download-Ordner an
+#ZIEL_ORDNER="/home/florian/mnt/Media/Download/watch/"
+#LOG_FILE="$HOME/.local/share/verschiebe_nzb/verschiebe_nzb.log" # Pfad für die Log-Datei # Pfad für die Log-Datei
 
 # Funktion zur Protokollierung
 log_message() {
